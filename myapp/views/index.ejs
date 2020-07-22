@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h1><%= title %></h1>
+      <p>Welcome to <%= title %></p>
+      <div class="row row-cols-1 row-cols-md-2">
+        <% if (chords.length) {
+          %>
+          <% chords.forEach((chord) => {
+            %>
+        <div class="col mb-4">
+          <div class="card">
+              <img src='images/chords/<%= chord.chordName.replace(/[, ]+/g, "").trim() %>.png' onerror="this.onerror=null; this.src='images/chords/NoImage.png'" class="card-img-top" width=50% alt="...">
+            <div class="card-body">
+              <h5 class="card-title">
+                Chord Name: <%= chord.chordName.replace(/[, ]+/g, "").trim() %>
+              </h5>
+              <ul>
+                <li>Strings: <%= chord.strings %></li>
+                <li>Fingering: <%= chord.fingering %></li>
+                <li>Tones: <%= chord.tones %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+          <%
+        }) %>
+      </div>
+        <%
+      } %>
+    </div>
+  </body>
+</html>

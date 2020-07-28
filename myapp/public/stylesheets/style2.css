@@ -1,0 +1,29 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  
+  a {
+    color: #00B7FF;
+  }
+  
+  .card-img-top {
+    width: 18%;
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+  
+  .display-4 {
+    color: #ffffff;
+  }
+  
+  .lead {
+    color: #ffffff;
+  }
+  
+  .jumbotron {
+    background-image: url("../images/guitarBackground2.jpg");
+    background-size: cover;
+    min-height: 400px;
+  }
+  

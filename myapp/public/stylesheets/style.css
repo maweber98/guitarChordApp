@@ -25,12 +25,30 @@ html, body {
 }
 
 #home {
-  background: url(/public/images/guitarBackground3.jpg) no-repeat center center fixed;
+  background: url(/images/guitarBackground3.jpg) no-repeat center center fixed;
   display: table;
   height: 100%;
   position: relative;
   width: 100%;
   background-size: cover;
+}
+
+.landing-text {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.landing-text h1 {
+  font-size: 500%;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.landing-text h3 {
+  font-size: 200%;
+  font-weight: 300;
+  color: #ffffff;
 }
 
 a {
@@ -52,7 +70,8 @@ a {
 }
 
 .jumbotron {
-  background-image: url("../images/guitarBackground2.jpg");
+  background: url(/images/guitarBackground4.jpg) no-repeat center center fixed;
   background-size: cover;
+  width: 100%;
   min-height: 400px;
 }
